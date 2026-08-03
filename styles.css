@@ -203,9 +203,9 @@ a:hover .arrow {
   width: 100%;
   margin: 20px auto 0;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
-  gap: 0;
+  gap: 12px;
 }
 
 .ecoDivider > span {
@@ -216,11 +216,11 @@ a:hover .arrow {
 
 .ecoDivider p {
   margin: 0;
-  padding-inline: 12px;
   color: var(--sage-soft);
   font-size: clamp(15px, 1.35vw, 19px);
   font-weight: 620;
   letter-spacing: 0.56em;
+  white-space: nowrap;
   text-transform: uppercase;
   transform: translateX(0.28em);
 }
