@@ -96,10 +96,10 @@ a {
   z-index: 0;
   inset: 0;
   background-color: var(--ink);
-  background-image: url("assets/hero-lamps-desktop.webp");
+  background-image: linear-gradient(to bottom, transparent 60%, var(--ink) 100%), url("assets/hero-lamps-desktop.webp");
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: 100% auto;
+  background-size: 100% 51.29vw, 100% auto;
   pointer-events: none;
 }
 
@@ -188,7 +188,7 @@ a:hover .arrow {
 
 .hero h1 {
   margin: 0;
-  font-size: clamp(64px, 7vw, 101px);
+  font-size: clamp(64px, 10vw, 145px);
   font-family: var(--font-montserrat), Arial, sans-serif;
   font-weight: 400;
   line-height: 0.9;
@@ -426,7 +426,7 @@ a:hover .arrow {
 
 .panelDescription strong {
   color: rgba(240, 236, 230, 0.9);
-  font-weight: 590;
+  font-weight: 450;
   text-decoration: none;
 }
 
@@ -458,6 +458,7 @@ a:hover .arrow {
   line-height: 1.55;
   letter-spacing: 0.18em;
   text-transform: uppercase;
+  text-wrap: wrap;
 }
 
 .sectionLabel {
@@ -626,7 +627,7 @@ footer p {
 .footerBrand {
   color: var(--milk);
   font-size: 18px;
-  font-weight: 760;
+  font-weight: 500;
 }
 
 .socials {
@@ -852,7 +853,8 @@ footer p {
     font-size: clamp(10.5px, 3vw, 12.5px);
     font-weight: 570;
     letter-spacing: 0.01em;
-    white-space: nowrap;
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
 
   .heroActions .arrow {
@@ -1083,3 +1085,47 @@ footer p {
     transition: none !important;
   }
 }
+
+/* Slightly more space between letters on the main actions. */
+.heroActions .button,
+.contactActions .button,
+.buttonStack .button,
+.reviewActions .button { letter-spacing: 0.07em; }
+
+.contactCopy p, .routeDescription, .reviewCopy .panelDescription, footer { letter-spacing: 0.07em; }
+
+.topPhone, .heroDetails .metaLink, .heroHours { letter-spacing: 0.07em; }
+
+.heroHours { letter-spacing: 0.12em; text-transform: none; }
+
+.heroDetails .metaLink { min-height: 52px; max-width: 100%; padding: 0 10px 0 20px; font-size: clamp(13px, 3.6vw, 16px); font-weight: 500; letter-spacing: 0.10em; }
+
+/* Equal starting appearance for contact, directions and review actions. */
+:is(.contactActions, .buttonStack, .reviewActions) .button {
+  border-color: rgba(181, 201, 167, 0.31);
+  background: var(--sage-glass);
+  color: var(--milk);
+  text-shadow: none;
+}
+@media (hover: hover) {
+  :is(.contactActions, .buttonStack, .reviewActions) .button:hover {
+    border-color: rgba(248, 218, 156, 0.58);
+    background: var(--amber-glass);
+    color: #fff8e9;
+  }
+}
+:is(.contactActions, .buttonStack, .reviewActions) .button:focus-visible,
+:is(.contactActions, .buttonStack, .reviewActions) .button:active {
+  border-color: rgba(248, 218, 156, 0.58);
+  background: var(--amber-glass);
+  color: #fff8e9;
+}
+
+.heroActions .buttonPrimary { font-weight: 400; }
+.heroActions .buttonGlass { text-transform: uppercase; letter-spacing: 0.19em; }
+
+.heroActions .button, .contactActions .button, .buttonStack .button, .reviewActions .button { text-transform: uppercase; letter-spacing: 0.19em; }
+
+.heroActions .button, .contactActions .button, .buttonStack .button, .reviewActions .button { font-weight: 400; }
+
+.contactCopy h2, .panelTitle { color: #d8b16d; }

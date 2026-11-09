@@ -1,0 +1,4 @@
+[hidden].compactBar { display: none; }
+.compactBar { position: fixed; z-index: 100; top: 0; left: 0; right: 0; display: flex; justify-content: center; gap: 10px; padding: 10px max(14px, env(safe-area-inset-right)) 10px max(14px, env(safe-area-inset-left)); background: rgba(13,13,13,.96); border-bottom: 1px solid rgba(240,236,230,.17); }
+.compactBar .button { justify-content: center; min-height: 44px; width: min(220px, 50%); padding: 8px 12px; font-size: clamp(10px, 2.8vw, 13px); font-weight: 400; text-align: center; text-transform: uppercase; letter-spacing: .1em; }
+html.compact-preview .mobileDock { display: none; }
