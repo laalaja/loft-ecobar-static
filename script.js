@@ -20,6 +20,9 @@
     if (!target) return;
 
     resetButtons();
+    if (window.matchMedia("(max-width: 760px)").matches && target.closest(".heroActions, .compactBar")) {
+      return;
+    }
     document.documentElement.classList.add("hasActiveButton");
     target.classList.add("isActiveButton");
     resetTimer = window.setTimeout(resetButtons, 900);

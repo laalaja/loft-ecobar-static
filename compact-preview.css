@@ -1,7 +1,54 @@
 [hidden].compactBar { display: none; }
 .compactBar { position: fixed; z-index: 100; top: 0; left: 0; right: 0; display: flex; justify-content: center; gap: 10px; padding: 10px max(14px, env(safe-area-inset-right)) 10px max(14px, env(safe-area-inset-left)); background: linear-gradient(to bottom, rgba(13,13,13,.9), rgba(13,13,13,.58)); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
 .compactBar .button { justify-content: center; min-height: 44px; width: min(220px, 50%); padding: 8px 12px; font-size: clamp(10px, 2.8vw, 13px); font-weight: 400; text-align: center; text-transform: uppercase; letter-spacing: .1em; }
+.heroActions .buttonGlass.isActiveButton,
+.compactBar .buttonGlass.isActiveButton {
+  border-color: rgba(181, 201, 167, 0.31);
+  background: var(--sage-glass);
+  color: var(--milk);
+  text-shadow: none;
+}
+.hasActiveButton .heroActions .buttonPrimary:not(.isActiveButton),
+.hasActiveButton .compactBar .buttonPrimary:not(.isActiveButton) {
+  border-color: rgba(240, 205, 137, 0.38);
+  background: var(--amber-glass);
+  color: #fff8e9;
+  text-shadow: 0 1px 14px rgba(0, 0, 0, 0.42);
+}
 @media (max-width: 760px) { .compactBar .button { letter-spacing: .12em; } }
+
+@media (hover: hover) and (pointer: fine) and (width > 760px) {
+  .heroActions .button:hover,
+  .compactBar .button:hover {
+    transform: scale(1.04);
+  }
+
+  .heroActions .button:active,
+  .compactBar .button:active,
+  .heroActions .button.isActiveButton,
+  .compactBar .button.isActiveButton {
+    transform: scale(1.06);
+  }
+}
+
+@media (max-width: 760px) {
+  .heroActions .button:active,
+  .compactBar .button:active {
+    filter: brightness(1.18);
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroActions .button:hover,
+  .compactBar .button:hover,
+  .heroActions .button:active,
+  .compactBar .button:active,
+  .heroActions .button.isActiveButton,
+  .compactBar .button.isActiveButton {
+    transform: none;
+  }
+}
 
 .topbar {
   position: fixed;

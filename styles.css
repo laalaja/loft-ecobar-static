@@ -216,7 +216,7 @@ a:hover .arrow {
 
 .ecoDivider p {
   margin: 0;
-  color: #9cbe86;
+  color: #b8bd94;
   font-size: clamp(15px, 1.35vw, 19px);
   font-weight: 620;
   letter-spacing: 0.56em;
@@ -1144,8 +1144,8 @@ footer p {
     color: #fff8e9;
   }
 }
-:is(.contactActions, .buttonStack, .reviewActions) .button:focus-visible,
-:is(.contactActions, .buttonStack, .reviewActions) .button:active {
+:is(.contactActions, .buttonStack, .reviewActions) .button:active,
+:is(.contactActions, .buttonStack, .reviewActions) .button.isActiveButton {
   border-color: rgba(248, 218, 156, 0.58);
   background: var(--amber-glass);
   color: #fff8e9;
@@ -1182,6 +1182,10 @@ footer p {
 }
 
 @media (width > 760px) {
+  footer {
+    padding-right: 28px;
+  }
+
   .heroActions {
     gap: 22px;
   }

@@ -59,7 +59,7 @@
 
 @media (width > 760px) {
   .menuIntro h1 {
-    font-size: 125px;
+    font-size: clamp(44px, 8vw, 80px);
     font-weight: 320;
     color: rgba(240, 236, 230, 0.86);
   }
@@ -109,6 +109,20 @@
 }
 
 @media (max-width: 760px) {
+  .menuIntro {
+    text-align: left;
+  }
+
+  .menuExplanation {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .menuLinksLine {
+    justify-content: flex-start;
+    padding-left: 4px;
+  }
+
   .menuCardsIntro h2 {
     font-size: 22px;
   }
@@ -177,11 +191,36 @@
 
 .menuOrder .button { font-weight: 400; }
 
+@media (hover: hover) and (pointer: fine) and (width > 760px) {
+  .menuOrder .button:hover {
+    transform: scale(1.04);
+  }
+
+  .menuOrder .button:active,
+  .menuOrder .button.isActiveButton {
+    transform: scale(1.06);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menuOrder .button:hover,
+  .menuOrder .button:active,
+  .menuOrder .button.isActiveButton {
+    transform: none;
+  }
+}
+
 @media (max-width: 760px) {
   .menuOrder .button { font-size: clamp(14px, 4.5vw, 17px); letter-spacing: 0.12em; }
 }
 @media (min-width: 761px) {
-  .menuOrder .button { font-size: 18px; letter-spacing: 0.1em; }
+  .menuOrder .button {
+    width: min(314px, 100%);
+    min-height: 58px;
+    justify-content: center;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+  }
 }
 
 .menuTopbar {
@@ -196,5 +235,20 @@
 @media (width > 760px) {
   .menuTopbar {
     border-radius: 0 0 22px 22px;
+  }
+
+  .menuIntro {
+    text-align: left;
+  }
+
+  .menuExplanation {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .menuLinksLine {
+    justify-content: flex-start;
+    padding-left: 8px;
+    font-size: 15px;
   }
 }
