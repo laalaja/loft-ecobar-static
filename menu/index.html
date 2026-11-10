@@ -24,8 +24,12 @@
     <main class="menuWrap">
       <header class="menuIntro">
         <h1>Меню</h1>
-        <a class="menuDownload" href="/menu.pdf" download>Скачать PDF</a>
-        <p class="menuExplanation">Здесь меню для просмотра. <a href="https://delivery.restik.com/loftecobar" target="_blank" rel="noopener noreferrer">Заказать онлайн можно здесь</a>.</p>
+        <div class="menuExplanation">
+          <p class="menuLinksLine">
+            <span>Скачать PDF <a class="menuOrderArrow" href="/menu.pdf" download aria-label="Скачать PDF меню"><span class="arrow" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M4 12 12 4M6 4h6v6"></path></svg></span></a></span>
+            <span>Заказать онлайн <a class="menuOrderArrow" href="https://delivery.restik.com/loftecobar" target="_blank" rel="noopener noreferrer" aria-label="Заказать онлайн в Restik"><span class="arrow" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M4 12 12 4M6 4h6v6"></path></svg></span></a></span>
+          </p>
+        </div>
       </header>
 
       <section class="menuCards" id="menu-cards" aria-labelledby="menu-cards-title">
@@ -58,7 +62,7 @@
         </ol>
       </section>
       <div class="menuOrder">
-        <a class="button buttonPrimary" href="https://delivery.restik.com/loftecobar" target="_blank" rel="noopener noreferrer">Заказать онлайн <span class="arrow" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M4 12 12 4M6 4h6v6" /></svg></span></a>
+        <a class="button buttonPrimary" href="https://delivery.restik.com/loftecobar" target="_blank" rel="noopener noreferrer">Заказать онлайн</a>
         <p class="menuOrderNote"><span>Доставка, самовывоз или бронь с предзаказом.</span><span>Способ выбирается в корзине.</span></p>
       </div>
     </main>

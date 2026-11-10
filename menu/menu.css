@@ -53,8 +53,16 @@
   margin: 0;
   font-family: var(--font-montserrat);
   font-size: clamp(44px, 8vw, 80px);
-  font-weight: 400;
+  font-weight: 320;
   line-height: 1.06;
+}
+
+@media (width > 760px) {
+  .menuIntro h1 {
+    font-size: 125px;
+    font-weight: 320;
+    color: rgba(240, 236, 230, 0.86);
+  }
 }
 
 .menuDownload {
@@ -70,9 +78,15 @@
   margin: 20px auto 0;
   color: var(--milk-muted);
   line-height: 1.6;
+  letter-spacing: 0.02em;
+  display: grid;
+  gap: 8px;
 }
 
-.menuExplanation a { color: var(--milk); text-underline-offset: 4px; }
+.menuExplanation p { margin: 0; }
+.menuLinksLine { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; column-gap: 20px; row-gap: 6px; }
+.menuOrderArrow { display: inline-flex; vertical-align: middle; margin-inline-start: 6px; text-decoration: none; }
+.menuOrderArrow .arrow { width: 30px; height: 30px; border-color: rgba(240,236,230,.35); color: var(--milk); }
 .menuOrder { display: flex; flex-direction: column; align-items: center; gap: 14px; padding: 0 0 64px; }
 .menuOrderNote { display: grid; gap: 2px; max-width: none; margin: 0; color: var(--milk-muted); font-size: 14px; line-height: 1.55; text-align: center; white-space: nowrap; }
 .menuOrder .button { min-height: 48px; gap: 16px; }
@@ -94,12 +108,25 @@
   line-height: 1.16;
 }
 
+@media (max-width: 760px) {
+  .menuCardsIntro h2 {
+    font-size: 22px;
+  }
+}
+
+@media (width > 760px) {
+  .menuCardsIntro h2 {
+    font-size: clamp(24px, 3.3vw, 34px);
+  }
+}
+
 .menuCardsIntro p {
   margin: 10px 0 0;
   color: var(--milk-muted);
   font-size: 15px;
   line-height: 1.55;
 }
+
 
 .menuCardList {
   display: grid;
@@ -150,11 +177,24 @@
 
 .menuOrder .button { font-weight: 400; }
 
+@media (max-width: 760px) {
+  .menuOrder .button { font-size: clamp(14px, 4.5vw, 17px); letter-spacing: 0.12em; }
+}
+@media (min-width: 761px) {
+  .menuOrder .button { font-size: 18px; letter-spacing: 0.1em; }
+}
+
 .menuTopbar {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: linear-gradient(to bottom, rgba(13, 13, 13, 0.88), rgba(13, 13, 13, 0.55));
+  background: linear-gradient(to bottom, rgba(24, 34, 27, 0.9), rgba(24, 34, 27, 0.58));
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
+}
+
+@media (width > 760px) {
+  .menuTopbar {
+    border-radius: 0 0 22px 22px;
+  }
 }
