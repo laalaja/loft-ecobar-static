@@ -28,10 +28,10 @@
         <h1>Меню</h1>
         <div class="menuExplanation">
           <p class="menuLinksLine">
-            <span>Скачать PDF <a class="menuOrderArrow" href="/menu.pdf" download="loft-menu.pdf" data-menu-download aria-label="Скачать PDF меню"><span class="arrow" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M4 12 12 4M6 4h6v6"></path></svg></span></a></span>
+            <span>Скачать PDF <a class="menuOrderArrow" href="/menu.pdf" download="loft-menu.pdf" data-menu-download aria-describedby="menu-download-status" aria-label="Скачать PDF меню"><span class="arrow" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M4 12 12 4M6 4h6v6"></path></svg></span></a></span>
             <span>Заказать онлайн <a class="menuOrderArrow" href="https://delivery.restik.com/loftecobar" target="_blank" rel="noopener noreferrer" aria-label="Заказать онлайн в Restik"><span class="arrow" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M4 12 12 4M6 4h6v6"></path></svg></span></a></span>
           </p>
-          <p data-download-status role="status" hidden><span></span> <a href="/menu.pdf" target="_blank" rel="noopener noreferrer">Открыть PDF</a></p>
+          <p id="menu-download-status" data-download-status role="status" hidden><span></span> <a href="/menu.pdf" target="_blank" rel="noopener noreferrer">Открыть PDF</a></p>
         </div>
       </header>
 
@@ -63,6 +63,16 @@
           </li>
 
         </ol>
+        <details class="syrupCard">
+          <summary>Карта сиропов <span class="syrupToggle" aria-hidden="true"></span></summary>
+          <div class="syrupContent">
+            <a class="syrupImage" href="/menu/syrups.png" aria-label="Открыть карту сиропов в полном размере">
+              <img src="/menu/syrups.png" alt="Карта сиропов ЛОФТ эко-бар: вкусы сиропов и популярные миксы" width="1024" height="1536" loading="lazy" decoding="async" />
+            </a>
+            <p class="syrupDownload">Скачать карту сиропов (PDF) <a class="menuOrderArrow" href="/menu/syrups.pdf" download="loft-syrups.pdf" data-menu-download aria-describedby="syrups-download-status" aria-label="Скачать карту сиропов PDF"><span class="arrow" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M4 12 12 4M6 4h6v6"></path></svg></span></a></p>
+            <p id="syrups-download-status" data-download-status role="status" hidden><span></span> <a href="/menu/syrups.pdf" target="_blank" rel="noopener noreferrer">Открыть PDF</a></p>
+          </div>
+        </details>
       </section>
       <div class="menuOrder">
         <a class="button buttonPrimary" href="https://delivery.restik.com/loftecobar" target="_blank" rel="noopener noreferrer">Заказать онлайн</a>
