@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/styles.css" />
     <link rel="stylesheet" href="/menu/menu.css" />
     <script src="/script.js" defer></script>
+    <script src="/menu/download.js" defer></script>
   </head>
   <body class="menuPage">
     <header class="menuTopbar menuWrap">
@@ -27,9 +28,10 @@
         <h1>Меню</h1>
         <div class="menuExplanation">
           <p class="menuLinksLine">
-            <span>Скачать PDF <a class="menuOrderArrow" href="/menu.pdf" download aria-label="Скачать PDF меню"><span class="arrow" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M4 12 12 4M6 4h6v6"></path></svg></span></a></span>
+            <span>Скачать PDF <a class="menuOrderArrow" href="/menu.pdf" download="loft-menu.pdf" data-menu-download aria-label="Скачать PDF меню"><span class="arrow" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M4 12 12 4M6 4h6v6"></path></svg></span></a></span>
             <span>Заказать онлайн <a class="menuOrderArrow" href="https://delivery.restik.com/loftecobar" target="_blank" rel="noopener noreferrer" aria-label="Заказать онлайн в Restik"><span class="arrow" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M4 12 12 4M6 4h6v6"></path></svg></span></a></span>
           </p>
+          <p data-download-status role="status" hidden><span></span> <a href="/menu.pdf" target="_blank" rel="noopener noreferrer">Открыть PDF</a></p>
         </div>
       </header>
 
