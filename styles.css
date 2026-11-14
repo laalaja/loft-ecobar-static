@@ -606,7 +606,7 @@ a:hover .arrow {
 .reviewDirectLink {
   color: var(--sage);
   text-decoration: none;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .buttonStack .button,
